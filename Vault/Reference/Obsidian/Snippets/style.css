@@ -1,0 +1,80 @@
+:root {
+	font-variant-ligatures: none;
+}
+
+
+.cm-line.HyperMD-header {
+	position: relative;
+}
+.cm-line.HyperMD-header:before {
+	position: absolute;
+	color: #ddd;
+	font-size: 0.7em;
+	bottom: 0.15em;
+}
+.cm-line.HyperMD-header.HyperMD-header-2:before {
+	content: "2.";
+	left: -2em;
+}
+.cm-line.HyperMD-header.HyperMD-header-3:before {
+	content: "3.";
+	left: -2.2em;
+}
+.cm-line.HyperMD-header.HyperMD-header-4:before {
+	content: "4.";
+	left: -2.4em;
+}
+.cm-line.HyperMD-header.HyperMD-header-5:before {
+	content: "5.";
+	left: -2.6em;
+}
+
+/*
+Image Tweaks
+============
+*/
+.internal-embed.image-embed img {
+/*
+border: 1px solid black;
+
+linear-gradient(to right, red, yellow, green)
+*/
+/*	box-shadow: 5px 5px 10px linear-gradient(#e66465, #9198e5);*/
+  box-shadow:
+  	-1px -1px 4px rgb(138, 92, 245, 0.2),
+  	1px 1px 4px rgb(138, 92, 245, 0.2);
+
+}
+
+
+/*
+Dataview Tweaks
+============
+*/
+ul.dataview.list-view-ul {
+	margin: 0;
+}
+div.dataview.dataview-container {
+	h4 {
+		font-size: 1.2em;
+		font-weight: normal;
+		margin: 0;
+		font-style: italic;
+	}
+	div.dataview.result-group ul.contains-task-list {
+		margin: 0;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

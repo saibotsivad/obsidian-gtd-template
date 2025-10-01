@@ -1,0 +1,31 @@
+{
+	"rules": [
+		{
+			"name": "Journal Note",
+			"enabled": true,
+			"type": "folder",
+			"contentSource": "file",
+			"footerText": "",
+			"renderLocation": "header",
+			"footerFilePath": "Reference/Obsidian/VirtualFooter/Journal.md",
+			"renderAboveProperties": true,
+			"path": "Journal/",
+			"recursive": true
+		},
+		{
+			"name": "Todays Note",
+			"enabled": true,
+			"type": "folder",
+			"contentSource": "file",
+			"footerText": "",
+			"renderLocation": "header",
+			"footerFilePath": "Reference/Obsidian/VirtualFooter/Daily File.md",
+			"renderAboveProperties": true,
+			"path": "/",
+			"recursive": false
+		}
+	],
+	"refreshOnFileOpen": false,
+	"renderInSourceMode": false,
+	"refreshOnMetadataChange": false
+}

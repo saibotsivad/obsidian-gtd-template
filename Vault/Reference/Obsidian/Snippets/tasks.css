@@ -1,0 +1,114 @@
+.cm-s-obsidian .cm-line.HyperMD-header {
+	padding-top: 0.1em;
+}
+
+/* ==========================================
+Task query list tree modifications
+(aka the ```tasks codeblock)
+*/
+
+.block-language-tasks {
+	border-left: 2px solid #a3ceef;
+	padding-left: 1.5em;
+	ul.plugin-tasks-query-result {
+		padding-inline-start: 0.5em;
+		padding-top: 0.5em;
+		padding-bottom: 0.5em;
+		/* space around the lists */
+		margin-top: 0em;
+		margin-bottom: 0em;
+	}
+	/* less vertical whitespace */
+	ul.plugin-tasks-query-result.contains-task-list {
+		padding: 0;
+	}
+	ul.plugin-tasks-query-result > li {
+	  margin-inline-start: 3ch;
+	}
+	h4.tasks-group-heading {
+		font-size: var(--h6-size);
+		color: #7eabcd;
+	}
+	.tasks-group-heading,
+	.tasks-group-heading p {
+		margin: 0;
+		margin-bottom: -0.3em
+	}
+	.plugin-tasks-query-result.tasks-layout-hide-urgency {
+		margin-top: 0;
+	}
+}
+
+/* ==========================================
+Virtual Embedded File
+*/
+.virtual-footer-dynamic-content-element {
+	> p,
+	.markdown-rendered > p {
+		margin: 0;
+	}
+}
+
+/* ==========================================
+Custom Task: In-Progress
+
+  - [/] this task is in progress
+
+*/
+.HyperMD-task-line input.task-list-item-checkbox[data-task="/"],
+.task-list-item[data-task="/"] > input[type=checkbox] {
+	background-color: #ddd60a;
+	border-color: #ddd60a;
+}
+
+/* ==========================================
+Custom Task: Moved
+
+  - [>] this task was moved to somewhere
+
+*/
+.HyperMD-task-line input.task-list-item-checkbox[data-task=">"],
+.task-list-item[data-task=">"] input[type="checkbox"]:checked {
+	background: #ddd;
+	border-color: #ddd;
+}
+.HyperMD-task-line input.task-list-item-checkbox[data-task=">"]:checked:after,
+.task-list-item[data-task=">"] input[type="checkbox"]:checked:after {
+	-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 384 512'%3E%3C!--! Font Awesome Pro 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --%3E%3Cpath d='M3.4 81.7c-7.9 15.8-1.5 35 14.3 42.9L280.5 256 17.7 387.4C1.9 395.3-4.5 414.5 3.4 430.3s27.1 22.2 42.9 14.3l320-160c10.8-5.4 17.7-16.5 17.7-28.6s-6.8-23.2-17.7-28.6l-320-160c-15.8-7.9-35-1.5-42.9 14.3z'/%3E%3C/svg%3E");
+	-webkit-mask-size: 50%;
+}
+.HyperMD-task-line[data-task=">"],
+.task-list-item[data-task=">"] {
+	color: var(--text-faint);
+}
+
+/* ==========================================
+Inline Badge
+
+  `[!!|calendar-check|meeting-end:11.26]`
+
+*/
+.inline-badge[data-inline-badge="customized"] {
+	background-color: var(--tag-color);
+	color: var(--background-primary);
+	font-size: 125%;
+	margin-bottom: 3px;
+}
+.inline-badge .inline-badge-icon svg {
+	width: 18px;
+	height: 24px;
+}
+.inline-badge .inline-badge-icon {
+	padding: 0.1em 0.2em;
+}
+.inline-badge .inline-badge-title-inner {
+	font-weight: normal;
+}
+/* special treatment for end of calendar meetings */
+div.cm-line:has(span.inline-badge-icon[aria-label="meeting-end"]) {
+	top: -0.7em;
+	.inline-badge {
+		border-top-left-radius: 0;
+		border-top-right-radius: 0;
+	}
+}
